@@ -1,0 +1,473 @@
+#if defined _INC_world_lspd_inc
+    #endinput
+#endif
+#define _INC_world_lspd_inc
+
+#include <YSI_Coding\y_hooks>
+
+// Variables
+static const Float: world_LSPDEnterPos[][] =
+{
+    {1168.3282, -1349.8583, 17.6898},
+    {1122.1667, -1377.0388, 13.5319}
+};
+
+// Hooks
+hook OnPlayerConnect(playerid)
+{
+    RemoveBuildingForPlayer(playerid, 1529, 1098.812, -1292.546, 17.140, 0.250);
+    RemoveBuildingForPlayer(playerid, 5930, 1134.250, -1338.078, 23.156, 0.250);
+    RemoveBuildingForPlayer(playerid, 5931, 1114.312, -1348.101, 17.984, 0.250);
+    RemoveBuildingForPlayer(playerid, 5934, 1076.710, -1358.093, 15.445, 0.250);
+    RemoveBuildingForPlayer(playerid, 5935, 1120.156, -1303.453, 18.570, 0.250);
+    RemoveBuildingForPlayer(playerid, 5936, 1090.054, -1310.531, 17.546, 0.250);
+    RemoveBuildingForPlayer(playerid, 716, 1068.640, -1365.773, 12.359, 0.250);
+    RemoveBuildingForPlayer(playerid, 1440, 1085.703, -1361.023, 13.265, 0.250);
+    RemoveBuildingForPlayer(playerid, 5731, 1076.710, -1358.093, 15.445, 0.250);
+    RemoveBuildingForPlayer(playerid, 5788, 1080.984, -1305.523, 16.359, 0.250);
+    RemoveBuildingForPlayer(playerid, 5787, 1090.054, -1310.531, 17.546, 0.250);
+    RemoveBuildingForPlayer(playerid, 5810, 1114.312, -1348.101, 17.984, 0.250);
+    RemoveBuildingForPlayer(playerid, 5993, 1110.898, -1328.812, 13.851, 0.250);
+    RemoveBuildingForPlayer(playerid, 5811, 1131.195, -1380.421, 17.070, 0.250);
+    RemoveBuildingForPlayer(playerid, 5708, 1134.250, -1338.078, 23.156, 0.250);
+    RemoveBuildingForPlayer(playerid, 1440, 1141.984, -1346.109, 13.265, 0.250);
+    RemoveBuildingForPlayer(playerid, 1440, 1148.679, -1385.187, 13.265, 0.250);
+    RemoveBuildingForPlayer(playerid, 617, 1178.601, -1332.070, 12.890, 0.250);
+    RemoveBuildingForPlayer(playerid, 620, 1184.007, -1353.500, 12.578, 0.250);
+    RemoveBuildingForPlayer(playerid, 620, 1184.007, -1343.265, 12.578, 0.250);
+    RemoveBuildingForPlayer(playerid, 5737, 1120.156, -1303.453, 18.570, 0.250);
+    RemoveBuildingForPlayer(playerid, 618, 1177.734, -1315.664, 13.296, 0.250);
+    RemoveBuildingForPlayer(playerid, 620, 1184.812, -1292.914, 12.578, 0.250);
+    RemoveBuildingForPlayer(playerid, 620, 1184.812, -1303.148, 12.578, 0.250);
+
+    return Y_HOOKS_CONTINUE_RETURN_1;
+}
+
+hook OnScriptInit()
+{
+    new lspd_ext;
+    SetDynamicObjectMaterialText(lspd_ext, 0, "POLICE", 20, "Ariel", 20, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(lspd_ext, 0, "PARKIN", 20, "Ariel", 20, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(lspd_ext, 0, "G ONLY", 20, "Ariel", 20, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(lspd_ext, 0, "POLICE", 20, "Ariel", 20, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(lspd_ext, 0, "PARKIN", 20, "Ariel", 20, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(lspd_ext, 0, "G ONLY", 20, "Ariel", 20, 1, -1, 0, 1);
+
+    lspd_ext = CreateDynamicObject(19379,1135.656,-1379.931,12.470,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1126.051,-1379.944,12.446,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1116.430,-1379.963,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1106.821,-1379.963,12.442,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1097.218,-1379.246,12.442,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1087.583,-1378.807,12.463,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.436,-1380.741,12.473,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.954,-1380.713,12.463,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.313,-1375.369,12.463,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1075.906,-1364.926,12.451,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1076.442,-1354.447,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1075.995,-1343.972,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.048,-1333.484,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1076.479,-1323.063,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1079.128,-1311.021,12.444,0.000,-90.000,-90.238,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1079.131,-1321.534,12.463,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.698,-1312.546,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.546,-1311.175,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1138.469,-1376.671,12.463,0.000,-90.000,-111.540,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1150.958,-1351.173,12.456,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1150.956,-1361.603,12.454,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1150.967,-1371.902,12.456,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1141.399,-1369.448,12.461,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1141.383,-1358.961,12.449,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1141.395,-1348.473,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.261,-1300.431,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1077.235,-1296.004,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1086.812,-1296.011,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1086.828,-1300.319,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1096.394,-1296.025,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1096.412,-1300.233,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1105.984,-1296.019,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1106.021,-1300.239,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1115.593,-1300.186,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1115.588,-1296.001,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1125.165,-1300.222,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1125.120,-1295.991,12.463,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1134.688,-1295.973,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1134.694,-1306.452,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1144.290,-1295.984,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1144.317,-1306.474,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1153.879,-1296.042,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1153.887,-1306.425,12.498,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1163.496,-1306.547,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1163.484,-1296.090,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1173.104,-1296.103,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1173.109,-1306.503,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1180.909,-1296.047,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1180.921,-1306.510,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1180.958,-1316.959,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1180.953,-1327.380,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1180.944,-1337.843,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1181.015,-1348.327,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "Bow_church_grass_alt", 0);
+    lspd_ext = CreateDynamicObject(19379,1131.805,-1369.474,12.465,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1131.802,-1359.041,12.465,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1131.788,-1348.547,12.465,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1125.824,-1336.437,43.237,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 16640, "a51", "ws_metalpanel1", 0);
+    lspd_ext = CreateDynamicObject(19379,1106.081,-1336.072,43.237,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 16640, "a51", "ws_metalpanel1", 0);
+    lspd_ext = CreateDynamicObject(19379,1121.092,-1336.887,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1121.086,-1335.982,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1130.570,-1336.009,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1130.572,-1336.868,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1125.837,-1331.200,38.076,0.000,0.000,-89.759,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1125.832,-1341.634,38.076,0.000,0.000,-89.759,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1106.113,-1341.356,38.076,0.000,0.000,-89.759,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1106.086,-1330.878,38.076,0.000,0.000,-89.760,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1110.882,-1335.588,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1110.875,-1336.609,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1101.352,-1336.642,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19379,1101.348,-1335.621,38.076,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 10101, "2notherbuildsfe", "sl_vicbrikwall01", 0);
+    lspd_ext = CreateDynamicObject(19459,1115.622,-1336.338,43.248,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 16640, "a51", "ws_metalpanel1", 0);
+    lspd_ext = CreateDynamicObject(19459,1117.193,-1336.322,43.228,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 16640, "a51", "ws_metalpanel1", 0);
+    lspd_ext = CreateDynamicObject(4100,1116.042,-1334.619,42.049,0.000,0.000,-39.840,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 16640, "a51", "ws_metalpanel1", 0);
+    lspd_ext = CreateDynamicObject(4100,1115.649,-1338.057,42.049,0.000,0.000,-39.840,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 16640, "a51", "ws_metalpanel1", 0);
+    lspd_ext = CreateDynamicObject(19379,1086.288,-1329.453,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1086.288,-1339.933,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1085.538,-1339.933,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1085.538,-1350.373,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1085.538,-1360.793,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1085.538,-1371.233,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1094.538,-1371.233,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1094.538,-1360.753,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1094.538,-1350.353,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1094.538,-1339.883,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1094.538,-1329.424,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1103.838,-1329.424,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1103.838,-1339.873,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1103.838,-1350.293,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1103.838,-1360.722,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1103.838,-1371.171,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1113.387,-1371.171,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1113.387,-1360.921,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1113.387,-1350.522,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1113.387,-1340.382,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1113.387,-1329.932,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1113.387,-1323.333,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1122.947,-1323.333,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1122.947,-1333.733,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1122.947,-1344.162,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1122.947,-1354.622,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1122.947,-1365.082,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1122.947,-1369.582,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1103.828,-1323.333,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1094.209,-1323.333,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1132.467,-1338.133,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19379,1132.467,-1331.053,12.444,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    SetDynamicObjectMaterial(lspd_ext, 0, 9514, "711_sfw", "ws_carpark2", 0);
+    lspd_ext = CreateDynamicObject(19368,1173.749,-1387.502,12.555,-0.199,-89.899,-90.499,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1177.178,-1387.532,12.503,-0.199,-89.899,-90.499,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1180.218,-1387.559,12.492,-0.199,-89.899,-90.499,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1066.109,-1352.117,12.304,-0.299,-89.399,-178.899,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1066.114,-1355.497,12.305,-0.299,-89.399,-178.899,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1066.172,-1358.518,12.312,0.000,-90.599,-178.499,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1173.109,-1306.503,12.503,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1118.640,-1386.848,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1121.826,-1386.866,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1124.994,-1386.864,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1115.525,-1386.849,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1112.359,-1386.843,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1109.182,-1386.857,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1106.041,-1386.849,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1128.208,-1386.845,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1131.375,-1386.847,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1134.568,-1386.850,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1137.766,-1386.849,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1139.369,-1386.838,12.534,0.000,-88.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1070.907,-1379.963,12.567,0.000,-88.000,-181.259,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1070.862,-1383.168,12.567,0.000,-88.000,-179.399,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1070.894,-1386.307,12.687,0.000,-88.000,-179.399,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1074.159,-1387.266,12.694,0.000,-88.000,-88.319,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1074.159,-1387.266,12.512,0.000,-88.000,-88.319,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1070.894,-1386.307,12.548,0.000,-88.000,-179.399,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19357,1070.862,-1383.168,12.628,0.000,-88.000,-179.399,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(16500,1088.746,-1319.296,14.840,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(16500,1088.746,-1319.296,14.439,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(16500,1088.737,-1319.296,14.100,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1113.875,-1400.588,13.142,0.000,0.000,-89.819,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1085.896,-1400.673,13.142,0.000,0.000,-89.819,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1099.735,-1400.579,13.142,0.000,0.000,-89.819,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1127.947,-1400.510,13.121,0.000,0.000,-89.819,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1141.941,-1400.462,13.121,0.000,0.000,-89.819,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7009,1158.027,-1345.201,26.471,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7184,1086.447,-1317.823,14.640,0.000,0.000,90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7010,1174.114,-1376.249,14.069,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1535,1121.464,-1375.933,12.548,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1535,1167.564,-1348.975,16.698,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7092,1134.103,-1375.225,45.091,0.000,0.000,90.599,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7244,1103.991,-1345.740,3.427,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18765,1176.147,-1387.628,7.856,0.000,37.000,-90.198,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18765,1180.854,-1387.634,7.856,0.000,37.000,-90.198,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,0.000,0.000,-8.000,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1181.110,-1358.854,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18765,1180.796,-1355.021,13.671,0.000,0.000,0.180,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.719,-1360.911,12.553,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.719,-1363.769,12.553,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.727,-1366.869,12.553,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.713,-1369.968,12.553,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.717,-1373.130,12.553,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.719,-1376.291,12.154,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.713,-1379.254,11.916,10.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1185.712,-1382.355,11.524,10.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(804,1156.784,-1368.218,19.038,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(804,1165.021,-1361.907,18.730,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(804,1161.666,-1366.709,18.284,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1163.937,-1363.885,19.117,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1159.564,-1367.394,19.115,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1153.749,-1369.016,19.334,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(620,1169.937,-1384.390,12.064,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(620,1143.282,-1384.259,11.825,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(620,1157.406,-1372.284,12.064,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(804,1166.759,-1377.713,15.459,0.000,8.000,-97.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(804,1145.365,-1377.651,15.054,0.000,8.000,-97.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(804,1156.667,-1377.631,15.199,0.000,8.000,-97.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1162.451,-1382.444,15.022,0.000,16.000,-96.480,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1156.406,-1372.982,17.578,0.000,16.000,-96.480,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(620,1182.998,-1363.130,12.036,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1182.281,-1363.245,17.560,0.000,0.000,-41.758,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1183.100,-1361.693,17.729,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(620,1078.984,-1384.328,12.107,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(620,1104.922,-1384.683,12.546,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1084.428,-1385.855,14.000,0.000,0.000,-39.778,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1098.126,-1385.832,14.038,0.000,0.000,-39.778,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(814,1150.860,-1382.569,14.436,0.000,16.000,-96.480,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(640,1100.421,-1384.894,13.461,0.000,0.000,-90.179,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(640,1081.427,-1385.052,13.461,0.000,0.000,-90.179,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(640,1091.406,-1385.097,13.461,0.000,0.000,-90.179,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1359,1180.312,-1356.812,17.349,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2866,1180.102,-1356.947,16.687,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3657,1175.756,-1357.063,17.191,0.000,0.000,179.339,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3657,1168.574,-1357.086,17.191,0.000,0.000,179.339,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1359,1172.130,-1356.912,17.349,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2866,1171.911,-1356.800,16.687,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1216,1180.126,-1349.374,17.297,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1216,1178.423,-1349.345,17.297,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1216,1176.583,-1349.332,17.297,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1482,1176.677,-1348.646,17.999,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1482,1179.501,-1348.655,17.999,0.000,0.000,-180.360,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1715,1085.135,-1318.171,12.703,0.000,0.000,-81.359,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1715,1085.713,-1319.984,12.703,0.000,0.000,-114.299,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1537,1129.005,-1315.801,5.177,0.000,0.000,-90.120,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19273,1128.963,-1314.041,6.659,0.000,0.000,-89.579,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1129.037,-1315.553,3.545,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19368,1129.681,-1315.479,3.545,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1537,1129.734,-1314.259,5.177,0.000,0.000,-270.778,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1118.623,-1316.285,17.097,0.000,0.000,-39.839,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1104.913,-1316.279,17.097,0.000,0.000,-39.839,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1091.162,-1316.266,17.097,0.000,0.000,-39.839,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1535,1085.081,-1323.699,17.037,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1535,1098.538,-1351.020,40.333,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19273,1100.447,-1351.004,41.942,0.000,0.000,-180.358,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19273,1087.052,-1323.687,18.454,0.000,0.000,-180.358,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2190,1084.343,-1318.074,13.652,0.000,0.000,93.238,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2190,1084.369,-1319.635,13.652,0.000,0.000,93.238,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2063,1087.255,-1323.053,13.567,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1242,1088.235,-1323.005,14.517,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1242,1087.832,-1322.988,14.517,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1242,1087.407,-1322.974,14.517,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1440,1079.698,-1325.123,12.998,0.000,0.000,-93.419,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3077,1088.680,-1319.286,12.057,0.000,0.000,-90.120,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1150.958,-1340.723,12.456,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7213,1100.836,-1342.191,14.218,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2606,1086.026,-1316.680,13.866,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(2606,1084.381,-1318.922,15.621,0.000,0.000,92.039,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18637,1088.687,-1322.114,13.303,79.000,-4.000,-88.800,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18637,1088.712,-1321.532,13.303,79.000,-4.000,-88.800,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18636,1086.927,-1323.089,13.982,0.000,9.000,122.098,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18636,1087.244,-1323.036,13.982,0.000,9.000,107.518,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18636,1086.665,-1323.078,13.982,0.000,9.000,86.878,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(18636,1086.305,-1323.092,13.982,0.000,9.000,126.180,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1079.678,-1291.480,13.121,0.000,0.000,-89.819,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19425,1182.108,-1397.735,12.232,0.000,0.000,-89.519,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19425,1182.114,-1392.827,12.232,0.000,0.000,-89.519,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19425,1079.358,-1403.702,12.555,0.000,0.000,-89.519,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19425,1079.399,-1408.860,12.555,0.000,0.000,-89.519,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(7662,1145.042,-1291.553,13.121,0.000,0.000,-90.179,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1535,1182.506,-1319.107,12.508,0.000,0.000,-89.699,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(9152,1129.047,-1298.571,13.189,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(715,1081.604,-1297.891,20.732,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(715,1182.248,-1297.334,20.732,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3006,1088.479,-1291.677,12.369,0.000,0.000,-9.960,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(715,1130.567,-1299.281,20.732,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3657,1147.149,-1370.232,13.008,0.000,0.000,-139.979,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3657,1152.667,-1366.244,13.008,0.000,0.000,-145.979,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1332,1153.371,-1348.333,13.480,0.000,0.000,-47.520,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1334,1145.719,-1347.000,13.678,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1257,1099.442,-1387.586,13.668,0.000,0.000,90.958,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1375,1104.307,-1389.368,14.168,0.000,0.000,92.220,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19467,1184.092,-1387.762,12.546,-30.000,0.000,90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19467,1079.687,-1413.952,12.732,-30.000,0.000,-91.319,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(970,1138.119,-1385.124,13.236,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(970,1131.362,-1385.115,13.236,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(970,1124.389,-1385.136,13.236,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(970,1116.566,-1385.121,13.236,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(970,1108.594,-1385.171,13.236,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1134.689,-1316.925,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1144.235,-1316.916,12.484,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1129.357,-1310.197,12.640,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19379,1129.416,-1320.624,12.640,0.000,-90.000,-90.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(966,1083.602,-1308.899,12.541,0.000,0.000,-269.700,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(967,1083.240,-1307.423,12.529,0.000,0.000,-180.298,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1101.597,-1323.737,40.797,0.000,0.000,-39.839,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1115.353,-1323.713,40.837,0.000,0.000,-39.839,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1128.953,-1323.703,40.881,0.000,0.000,-39.840,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1135.605,-1330.833,40.908,0.000,0.000,-129.539,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1135.659,-1344.457,40.908,0.000,0.000,-129.539,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1094.591,-1344.623,40.908,0.000,0.000,-129.539,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1101.477,-1354.747,40.908,0.000,0.000,-129.539,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(4100,1094.524,-1330.865,40.908,0.000,0.000,-129.539,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3928,1125.970,-1336.351,43.352,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(3928,1106.373,-1336.018,43.352,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(8614,1105.365,-1342.254,42.106,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19459,1154.750,-1355.681,10.293,0.000,0.000,-87.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19459,1154.750,-1355.681,6.819,0.000,0.000,-87.000,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19459,1154.628,-1369.056,6.819,0.000,0.000,-104.640,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(19459,1154.628,-1369.056,10.305,0.000,0.000,-104.640,-1,-1,-1,1000.000,1000.000);
+    lspd_ext = CreateDynamicObject(1535,1122.869,-1375.928,12.548,0.000,0.000,0.000,-1,-1,-1,1000.000,1000.000);
+
+    CreateDynamicPickup(19135, 1, world_LSPDEnterPos[0][0], world_LSPDEnterPos[0][1], world_LSPDEnterPos[0][2], .streamdistance = 15.0);
+    CreateDynamicPickup(19135, 1, world_LSPDEnterPos[1][0], world_LSPDEnterPos[1][1], world_LSPDEnterPos[1][2], .streamdistance = 15.0);
+    CreateDynamicPickup(19135, 1, 246.783996, 63.900199, 1003.640625, .streamdistance = 7.0);
+
+    CreateDynamic3DTextLabel(""RED"[POLICIJSKA STANICA]\n"WHITE"Za ulaz pritisnite \""RED"F/ENTER"WHITE"\"", -1, world_LSPDEnterPos[0][0], world_LSPDEnterPos[0][1], world_LSPDEnterPos[0][2], .drawdistance = 15.0, .streamdistance = 15.0);
+    CreateDynamic3DTextLabel(""RED"[POLICIJSKA STANICA]\n"WHITE"Za ulaz pritisnite \""RED"F/ENTER"WHITE"\"", -1, world_LSPDEnterPos[1][0], world_LSPDEnterPos[1][1], world_LSPDEnterPos[1][2], .drawdistance = 15.0, .streamdistance = 15.0);
+    CreateDynamic3DTextLabel(""RED"[POLICIJSKA STANICA]\n"WHITE"Za izlaz pritisnite \""RED"F/ENTER"WHITE"\"", -1, 246.783996, 63.900199, 1003.640625, .drawdistance = 7.0, .streamdistance = 7.0);
+
+    return Y_HOOKS_CONTINUE_RETURN_1;
+}
+
+hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
+{
+    if (PRESSED(KEY_SECONDARY_ATTACK))
+    {
+        if (IsPlayerInRangeOfPoint(playerid, 2.0, world_LSPDEnterPos[0][0], world_LSPDEnterPos[0][1], world_LSPDEnterPos[0][2]) ||
+            IsPlayerInRangeOfPoint(playerid, 2.0, world_LSPDEnterPos[1][0], world_LSPDEnterPos[1][1], world_LSPDEnterPos[1][2])
+        )
+        {
+            Streamer_UpdateEx(playerid, 246.783996, 63.900199, 1003.640625, .compensatedtime = 2000);
+            SetPlayerInterior(playerid, 6);
+        }
+
+        else if (IsPlayerInRangeOfPoint(playerid, 2.0, 246.783996, 63.900199, 1003.640625))
+        {
+            new rand_pos = random(sizeof(world_LSPDEnterPos));
+            Streamer_UpdateEx(playerid,
+                world_LSPDEnterPos[rand_pos][0], world_LSPDEnterPos[rand_pos][1], world_LSPDEnterPos[rand_pos][2],
+                .compensatedtime = 2000
+            );
+            SetPlayerInterior(playerid, 0);
+        }
+    }
+
+    return Y_HOOKS_CONTINUE_RETURN_1;
+}
